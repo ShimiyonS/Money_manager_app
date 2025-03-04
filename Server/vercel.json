@@ -1,9 +1,8 @@
 {
     "version":2,
-    "name":"money-manager",
     "builds" :[
         {
-            "src":"./server.js",
+            "src":"server.js",
             "use":"@vercel/node"
         }
     ],
