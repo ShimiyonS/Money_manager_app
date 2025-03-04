@@ -27,9 +27,9 @@ app.use(require("./routes/route"));
 //     console.log(`Connection Failed ${error}`);
 //   });
 app.get("/", (req, res) => {
-  res.send("Hello, World!");
+  res.send("<h1>Welcome To Your Node Server</h1>");
 });
-
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
-});
+const PORT = process.env.PORT || 8080;
+const server = app.listen(PORT, () =>
+  console.log(`localhost User Server : ${PORT}`)
+);
