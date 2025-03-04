@@ -22,7 +22,7 @@ export const Form = () => {
         <form id="form" onSubmit={handleSubmit(onSubmit)}>
             <div className='grid gap-4'>
                 <div className='input-group'>
-                    <input type="text" {...register('name')} placeholder='Sallary,House Rent,SIP' className='form-input'/>
+                    <input type="text" {...register('name')} placeholder='Salary,House Rent,SIP' className='form-input'/>
                 </div>
                 <select className='form-input' {...register('type')}>
                     <option value="Investment" defaultValue>Investment</option>
