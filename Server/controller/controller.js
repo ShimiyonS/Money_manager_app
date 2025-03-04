@@ -4,8 +4,8 @@ const model = require("../models/model");
 async function create_Categories(req, res) {
   try {
     const Create = await new model.Categories({
-      type: "Savings",   
-      color: "#00FF00",
+      type: "Expense",   
+      color: "#FF0000",
     }).save();
     if (!Create) {
       return res.status(400).json({ message: "Error posting your content" });
