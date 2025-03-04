@@ -1,8 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const baseURL = "http://localhost:8080";
+const baseURL = process.env.REACT_APP_API_URL;
 // https://money-manager-rust.vercel.app/
-
 
 export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: baseURL }),
@@ -20,7 +19,7 @@ export const apiSlice = createApi({
       query: () => "/api/labels",
       providesTags: ["transaction"],
     }),
-    
+
     // add new Transaction
     addTransaction: builder.mutation({
       query: (initialTransaction) => ({

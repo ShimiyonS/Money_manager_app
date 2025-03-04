@@ -1,12 +1,17 @@
 const express = require("express");
-const app = express();
-
+const cors = require("cors");
 require("dotenv").config();
 
-const cors = require("cors");
-const port = process.env.PORT;
+const app = express();
+const corsOptions = {
+  origin: "*", // Allow all origins (change this for security)
+  methods: "GET,POST,PUT,DELETE",
+  allowedHeaders: "Content-Type,Authorization",
+};
 
-app.use(cors());
+// const port = process.env.PORT;
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const con = require("./db/connection.js");
