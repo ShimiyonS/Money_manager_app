@@ -68,12 +68,6 @@ A simple and intuitive financial tracking web application that helps users track
   npm install
   npm start
    
-
-
----
-
-✅ Now you can just save this as `README.md` in your repo root and it’ll be clear for anyone looking at your project on GitHub or downloading it locally.
-
 ---
 
 **Optional:**  
